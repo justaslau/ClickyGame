@@ -19,11 +19,13 @@ class Character extends Component {
         {value => {
           const { dispatch } = value;
           return (
-            <img
-              alt={`The Simpsons ${character.name}`}
-              src={`/images/${character.name}.jpg`}
-              onClick={this.onImageClick.bind(this, character, dispatch)}
-            />
+            <div className="col-3">
+              <img
+                alt={`The Simpsons ${character.name}`}
+                src={`images/${character.name}.jpg`}
+                onClick={this.onImageClick.bind(this, character, dispatch)}
+              />
+            </div>
           );
         }}
       </Consumer>

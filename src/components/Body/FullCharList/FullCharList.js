@@ -10,13 +10,12 @@ class FullCharList extends Component {
         {value => {
           const { animation, characters } = value;
           return (
-            <div className={animation ? 'shakeDiv' : null}>
-              <h1 className="display-4 mb-2">
-                <span className="text-danger">Contact</span> List
-              </h1>
-              {characters.map(char => (
-                <Character key={char.id} character={char} />
-              ))}
+            <div className="container">
+              <div className={animation ? 'shakeDiv row' : 'row'}>
+                {characters.map(char => (
+                  <Character key={char.id} character={char} />
+                ))}
+              </div>
             </div>
           );
         }}
