@@ -1,0 +1,13 @@
+.char {
+  border: 5px solid #f1f1f1;
+  border-radius: 3px;
+  margin: 8px 25px;
+  cursor: pointer;
+  padding: 20px 20px 0 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.char:hover {
+  transition: 0.5s;
+  transform: scale(1.1);
+}

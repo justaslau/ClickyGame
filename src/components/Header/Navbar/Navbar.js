@@ -7,12 +7,16 @@ class Header extends Component {
     return (
       <Consumer>
         {value => {
-          const { score, topScore } = value;
+          const { score, topScore, animation } = value;
           return (
             <div>
               <nav className="navbar">
                 <div className="col-4">Clicky Game</div>
-                <div className="col-4">Click an image to begin!</div>
+                <div
+                  className={animation ? 'blinkRed col-4' : 'blinkGreen col-4'}
+                >
+                  Click an image to begin!
+                </div>
                 <div className="col-4">{`Score: ${score} | Top Score: ${topScore}`}</div>
               </nav>
             </div>

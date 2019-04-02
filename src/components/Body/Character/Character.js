@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Consumer } from '../../../context';
+import './character.css';
 
 class Character extends Component {
   onImageClick = (character, dispatch) => {
@@ -21,6 +22,7 @@ class Character extends Component {
           return (
             <div className="col-3">
               <img
+                className="char"
                 alt={`The Simpsons ${character.name}`}
                 src={`images/${character.name}.jpg`}
                 onClick={this.onImageClick.bind(this, character, dispatch)}
