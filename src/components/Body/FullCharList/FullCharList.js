@@ -10,7 +10,7 @@ class FullCharList extends Component {
         {value => {
           const { animation, characters } = value;
           return (
-            <div className={animation ? 'ahashakeheartache' : null}>
+            <div className={animation ? 'shakeDiv' : null}>
               <h1 className="display-4 mb-2">
                 <span className="text-danger">Contact</span> List
               </h1>

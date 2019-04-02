@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import charsFromFile from './characters.json';
-
+import shuffle from 'shuffle-array';
 const Context = React.createContext();
 
 const reducer = (state, action) => {
   switch (action.type) {
     case 'INCREASE_SCORE':
+      state.characters.map(char =>
+        char.id === action.payload.id ? action.payload : char
+      );
       return {
         ...state,
-        characters: state.characters.map(char =>
-          char.id === action.payload.id ? action.payload : char
-        ),
+        characters: shuffle(state.characters),
         score: ++state.score,
         incrementScore: ++state.incrementScore,
         animation: false,
@@ -21,10 +22,11 @@ const reducer = (state, action) => {
       };
     case 'RESET_SCORE':
       charsFromFile.map(char => (char.clicked = false));
+
       return {
         ...state,
         score: 0,
-        characters: charsFromFile,
+        characters: shuffle(charsFromFile),
         incrementScore: 0,
         animation: true
       };
@@ -35,7 +37,7 @@ const reducer = (state, action) => {
 
 export class Provider extends Component {
   state = {
-    characters: charsFromFile,
+    characters: shuffle(charsFromFile),
     score: 0,
     topScore: 0,
     incrementScore: 0,
