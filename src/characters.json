@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Homer",
+    "clicked": false
+  },
+  {
+    "id": 2,
+    "name": "Marge",
+    "clicked": false
+  },
+  {
+    "id": 3,
+    "name": "Bart",
+    "clicked": false
+  },
+  {
+    "id": 4,
+    "name": "Lisa",
+    "clicked": false
+  },
+  {
+    "id": 5,
+    "name": "Maggie",
+    "clicked": false
+  },
+  {
+    "id": 6,
+    "name": "Abraham",
+    "clicked": false
+  },
+  {
+    "id": 7,
+    "name": "Flanders",
+    "clicked": false
+  },
+  {
+    "id": 8,
+    "name": "Moe",
+    "clicked": false
+  },
+  {
+    "id": 9,
+    "name": "Monty",
+    "clicked": false
+  },
+  {
+    "id": 10,
+    "name": "Lenny",
+    "clicked": false
+  },
+  {
+    "id": 11,
+    "name": "Seymour",
+    "clicked": false
+  },
+  {
+    "id": 12,
+    "name": "Milhouse",
+    "clicked": false
+  },
+  {
+    "id": 13,
+    "name": "Ralph",
+    "clicked": false
+  },
+  {
+    "id": 14,
+    "name": "Krusty",
+    "clicked": false
+  },
+  {
+    "id": 15,
+    "name": "Apu",
+    "clicked": false
+  },
+  {
+    "id": 16,
+    "name": "Clancy",
+    "clicked": false
+  }
+]
