@@ -13,6 +13,7 @@ const reducer = (state, action) => {
         ),
         score: ++state.score,
         incrementScore: ++state.incrementScore,
+        animation: false,
         topScore:
           state.topScore < state.incrementScore
             ? state.incrementScore
@@ -24,7 +25,8 @@ const reducer = (state, action) => {
         ...state,
         score: 0,
         characters: charsFromFile,
-        incrementScore: 0
+        incrementScore: 0,
+        animation: true
       };
     default:
       return state;
@@ -37,6 +39,7 @@ export class Provider extends Component {
     score: 0,
     topScore: 0,
     incrementScore: 0,
+    animation: false,
     dispatch: action => this.setState(state => reducer(state, action))
   };
   render() {
