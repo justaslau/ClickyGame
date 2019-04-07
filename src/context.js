@@ -7,29 +7,23 @@ const reducer = (state, action) => {
   switch (action.type) {
     case 'INCREASE_SCORE':
       state.characters.map(char =>
-        char.id === action.payload.id ? action.payload : char
+        char.id === action.payload.id ? (char.clicked = true) : char
       );
       return {
-        ...state,
         characters: shuffle(state.characters),
         score: ++state.score,
-        incrementScore: ++state.incrementScore,
-        animation: false,
-        topScore:
-          state.topScore < state.incrementScore
-            ? state.incrementScore
-            : state.topScore
+        failAnimation: false,
+        topScore: state.topScore < state.score ? state.score : state.topScore
       };
-    case 'RESET_SCORE':
-      charsFromFile.map(char => (char.clicked = false));
 
+    case 'RESET_SCORE':
+      state.characters.map(char => (char.clicked = false));
       return {
-        ...state,
+        characters: shuffle(state.characters),
         score: 0,
-        characters: shuffle(charsFromFile),
-        incrementScore: 0,
-        animation: true
+        failAnimation: true
       };
+
     default:
       return state;
   }
@@ -40,10 +34,10 @@ export class Provider extends Component {
     characters: shuffle(charsFromFile),
     score: 0,
     topScore: 0,
-    incrementScore: 0,
-    animation: false,
+    failAnimation: null,
     dispatch: action => this.setState(state => reducer(state, action))
   };
+
   render() {
     return (
       <Context.Provider value={this.state}>

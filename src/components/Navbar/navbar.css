@@ -1,0 +1,35 @@
+.logo-icon {
+  font-size: 32px;
+  color: #fff;
+  padding: 7px;
+  border-radius: 10px;
+  background: tomato;
+}
+.clicky {
+  color: tomato;
+}
+.game,
+.middle-text,
+.score {
+  color: #fff;
+}
+
+.score {
+  margin-left: 5px;
+}
+
+body .navbar {
+  background: #001f3f;
+}
+
+@-webkit-keyframes blinkerRed {
+  to {
+    color: red;
+  }
+}
+.incorrect {
+  text-decoration: blink;
+  -webkit-animation-name: blinkerRed;
+  -webkit-animation-duration: 0.3s;
+  -webkit-animation-iteration-count: 1;
+}

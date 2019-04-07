@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import Navbar from './components/Header/Navbar/Navbar';
-import Jumbotron from './components/Header/Jumbotron/Jumbotron';
-import FullCharList from './components/Body/FullCharList/FullCharList';
 import { Provider } from './context';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
+import Navbar from './components/Navbar/Navbar';
+import FullCharList from './components/FullCharList/FullCharList';
+import Footer from './components/Footer/Footer';
+
 import './App.css';
 
 class App extends Component {
@@ -12,8 +13,8 @@ class App extends Component {
       <Provider>
         <div className="App">
           <Navbar />
-          <Jumbotron />
           <FullCharList />
+          <Footer />
         </div>
       </Provider>
     );

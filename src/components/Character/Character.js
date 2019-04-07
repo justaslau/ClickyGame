@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Consumer } from '../../../context';
+import { Consumer } from '../../context';
 import './character.css';
 
 class Character extends Component {
   onImageClick = (character, dispatch) => {
-    if (!character.clicked) {
-      character.clicked = true;
-      dispatch({ type: 'INCREASE_SCORE', payload: character });
-    } else {
-      dispatch({ type: 'RESET_SCORE', payload: character });
-    }
+    !character.clicked
+      ? dispatch({ type: 'INCREASE_SCORE', payload: character })
+      : dispatch({ type: 'RESET_SCORE', payload: character });
   };
 
   render() {
